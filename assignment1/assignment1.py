@@ -3,7 +3,7 @@ import requests
 import json
 import hashlib
 
-with open("fred.apikey.txt", "r") as f:
+with open("fred_apikey.txt", "r") as f:
     apikey = f.readline().strip()
 
 series = "SP500"
