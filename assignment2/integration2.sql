@@ -1,13 +1,23 @@
 INSERT INTO Integrated_Arrival
-SELECT 
-    a.Airline,
-    a2.FlightNumber,
-    a2.ScheduledArrivalDate,
-    NULL AS ActualArrivalDate,
-    a2.ScheduledArrivalTime,
-    a2.ActualArrivalTime,
-    a.GateTime,
-    a.LandingTime,
-    CONCAT(a.Terminal, a.Gate) AS ArrivalGate
-FROM Airline2_Flight AS a2
-JOIN Airport3_Arrivals AS a ON a2.FlightNumber = a.FlightNumber;
+SELECT
+    'A2' AS Airline, 
+    F.FlightNumber AS FlightNumber,
+    A.Scheduled AS ScheduledArrivalDate,
+    A.Actual AS ActualArrivalDate,
+    F.ScheduledArrivalTime AS ScheduledArrivalTime,
+    F.ActualArrivalTime AS ActualArrivalTime,
+    A.GateTime AS GateTime,
+    A.LandingTime AS LandingTime,
+    (A.Terminal || A.Gate) AS ArrivalGate
+FROM
+    Airport3_Arrivals AS A
+JOIN
+    Airline2_Flight AS F 
+ON 
+    F.FlightNumber=A.FlightNumber
+AND 
+    A.Scheduled=F.ScheduledArrivalDate
+AND
+    'A2'=A.Airline
+AND 
+    F.ArrivalAirport='EWR';
