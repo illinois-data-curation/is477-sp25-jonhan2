@@ -8,4 +8,4 @@ CREATE TABLE Integrated_Arrival(
     GateTime TEXT,
     LandingTime TEXT,
     ArrivalGate TEXT
-)
+);
