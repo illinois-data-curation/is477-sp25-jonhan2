@@ -3,7 +3,7 @@ CREATE TABLE Integrated_Arrival(
     FlightNumber TEXT,
     ScheduledArrivalDate TEXT,
     ActualArrivalDate TEXT,
-    ScheduledArrivalDate TEXT,
+    ScheduledArrivalTime TEXT,
     ActualArrivalTime TEXT,
     GateTime TEXT,
     LandingTime TEXT,
