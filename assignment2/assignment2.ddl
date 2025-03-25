@@ -1,28 +1,28 @@
 CREATE TABLE Airline1_Schedule (
-    FlightId NUMBER,
-    FlightNumber NUMBER,
+    FlightId INTEGER,
+    FlightNumber INTEGER,
     StartDate TEXT,
     EndDate TEXT,
     DepartureTime TEXT,
-    Departure Airport TEXT,
+    DepartureAirport TEXT,
     ArrivalTime TEXT,
     ArrivalAirport TEXT,
     PRIMARY KEY (FlightId)
 );
 CREATE TABLE Airline1_Flight (
-    FlightId NUMBER,
+    FlightId INTEGER,
     DepartureDate TEXT,
     DepartureTime TEXT,
     DepartureGate TEXT,
     ArrivalDate TEXT,
     ArrivalTime TEXT,
     ArrivalGate TEXT,
-    PlaneId NUMBER,
-    PRIMARY KEY (FlightId, DepartureDate)
+    PlaneId INTEGER,
+    PRIMARY KEY (FlightId, DepartureDate),
     FOREIGN KEY (FlightId) REFERENCES Airline1_Schedule(FlightId)
 );
 CREATE TABLE Airline2_Flight (
-    FlightNumber NUMBER,
+    FlightNumber INTEGER,
     DepartureAirport TEXT,
     ScheduledDepartureDate TEXT,
     ScheduledDepartureTime TEXT, 
