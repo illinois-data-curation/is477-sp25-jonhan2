@@ -3,3 +3,6 @@ lab3/djia.csv
 lab3/djia.json
 assignment1/sp500.csv
 assignment1/sp500.json
+__pycache__
+lab9/data
+.snakemake
