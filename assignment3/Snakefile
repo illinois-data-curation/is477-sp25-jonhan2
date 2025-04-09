@@ -8,16 +8,20 @@ rule create_db:
     output:
         "inspections.db"
     shell:
-        "sqlite3 {output} < {input}"
+        """
+        sqlite3 {output} < {input}
+        """
 
 rule aggregate_sql:
     input:
-        db="inspections.db",
-        script="aggregate.sql"
+        "inspections.db",
+        "aggregate.sql"
     output:
         "results/sql-fac-types.csv"
     shell:
-        "sqlite3 {input.db} < {input.script}"
+        """
+        sqlite3 {input[0]} < {input[1]}
+        """
 
 rule aggregate_pandas:
     input:
@@ -25,13 +29,17 @@ rule aggregate_pandas:
     output:
         "results/pandas-fac-types.csv"
     shell:
-        "python aggregate.py"
+        """
+        python aggregate.py
+        """
 
 rule compare:
     input:
-        sql="results/sql-fac-types.csv",
-        pandas="results/pandas-fac-types.csv"
+        "results/sql-fac-types.csv",
+        "results/pandas-fac-types.csv"
     output:
         "results/comparison.csv"
     shell:
-        "python compare.py"
+        """
+        python compare.py
+        """
