@@ -3,10 +3,10 @@ rule all:
         "results/comparison.csv"
 
 rule create_db:
-    output:
-        "inspections.db"
     input:
         "input/create_and_load_db.sql"
+    output:
+        "inspections.db"
     shell:
         "sqlite3 {output} < {input}"
 
@@ -24,8 +24,8 @@ rule aggregate_pandas:
         "input/Food_Inspections_50k.csv"
     output:
         "results/pandas-fac-types.csv"
-    script:
-        "aggregate.py"
+    shell:
+        "python aggregate.py"
 
 rule compare:
     input:
@@ -33,5 +33,5 @@ rule compare:
         pandas="results/pandas-fac-types.csv"
     output:
         "results/comparison.csv"
-    script:
-        "compare.py"
+    shell:
+        "python compare.py"
