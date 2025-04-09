@@ -1,0 +1,14 @@
+digraph snakemake_dag {
+    graph[bgcolor=white, margin=0];
+    node[shape=box, style=rounded, fontname=sans,                 fontsize=10, penwidth=2];
+    edge[penwidth=2, color=grey];
+	0[label = "all", color = "0.27 0.6 0.85", style="rounded,dashed"];
+	1[label = "compare", color = "0.40 0.6 0.85", style="rounded,dashed"];
+	2[label = "aggregate_sql", color = "0.13 0.6 0.85", style="rounded,dashed"];
+	3[label = "create_db", color = "0.53 0.6 0.85", style="rounded,dashed"];
+	4[label = "aggregate_pandas", color = "0.00 0.6 0.85", style="rounded,dashed"];
+	1 -> 0
+	2 -> 1
+	4 -> 1
+	3 -> 2
+}            
