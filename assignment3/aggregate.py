@@ -9,7 +9,6 @@ agg_df = (
     .sort_values("Facility Type", ascending=True)
 )
 
-# Rename to match SQL output format
 agg_df.rename(columns={"Facility Type": "Facility_Type"}, inplace=True)
 
 agg_df.to_csv("results/pandas-fac-types.csv", index=False)
