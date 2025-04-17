@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resource xmlns="http://datacite.org/schema/kernel-4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4.3/metadata.xsd">
+  <identifier identifierType="DOI">10.5072/zenodo.199142</identifier>
+  <alternateIdentifiers>
+    <alternateIdentifier alternateIdentifierType="URL">https://sandbox.zenodo.org/records/199142</alternateIdentifier>
+    <alternateIdentifier alternateIdentifierType="oai">oai:zenodo.org:199142</alternateIdentifier>
+  </alternateIdentifiers>
+  <creators>
+    <creator>
+      <creatorName nameType="Personal">Han, Jonathan</creatorName>
+      <givenName>Jonathan</givenName>
+      <familyName>Han</familyName>
+      <nameIdentifier nameIdentifierScheme="ORCID">0009-0000-3519-3904</nameIdentifier>
+    </creator>
+  </creators>
+  <titles>
+    <title>IS477 SP25 Class Repository</title>
+  </titles>
+  <publisher>Zenodo</publisher>
+  <publicationYear>2025</publicationYear>
+  <dates>
+    <date dateType="Issued">2025-04-17</date>
+    <date dateType="Accepted" dateInformation="Submitted">2025-04-27</date>
+    <date dateType="Updated">2025-04-17</date>
+  </dates>
+  <resourceType resourceTypeGeneral="ComputationalNotebook"></resourceType>
+  <relatedIdentifiers>
+    <relatedIdentifier relatedIdentifierType="URL" relationType="IsSupplementTo" resourceTypeGeneral="ComputationalNotebook">https://github.com/illinois-data-curation/is477-sp25-jonhan2/releases/tag/lab-10</relatedIdentifier>
+    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsVersionOf">10.5072/zenodo.199141</relatedIdentifier>
+  </relatedIdentifiers>
+  <rightsList>
+    <rights rightsURI="http://www.apache.org/licenses/LICENSE-2.0" rightsIdentifierScheme="spdx" rightsIdentifier="apache-2.0">Apache License 2.0</rights>
+  </rightsList>
+  <descriptions>
+    <description descriptionType="Abstract">IS477 Lab 10 </description>
+  </descriptions>
+</resource>
+
