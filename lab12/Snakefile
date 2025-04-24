@@ -1,0 +1,20 @@
+rule all:
+    input:
+        "results/uci_adult_results.txt"
+
+rule prepare_data:
+    output:
+        "data/adult/adult.data",
+        "data/adult/adult.test",
+    shell:
+        "python scripts/prepare_data.py"
+
+rule reproduce_adult:
+    input:
+        "data/adult/adult.data",
+        "data/adult/adult.test"
+    output:
+        "results/uci_adult_results.txt"
+    shell:
+        "python scripts/reproduce_adult.py"
+
